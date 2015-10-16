@@ -49,7 +49,7 @@ class FormatBlot extends ParentBlot {
       } else if (this.attributes[name] != null) {
         this.attributes[name].remove(this.domNode);
       }
-      if (!this.attributes[name].value(this.domNode)) {
+      if (this.attributes[name] && !this.attributes[name].value(this.domNode)) {
         // Add falsy value may end up removing
         delete this.attributes[name];
       }
