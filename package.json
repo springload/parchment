@@ -18,10 +18,10 @@
     "karma-sauce-launcher": "~0.2.14",
     "karma-webpack": "^1.7.0",
     "lodash": "^3.10.1",
-    "ts-loader": "^0.5.6",
-    "typescript": "^1.6.2",
+    "ts-loader": "0.5.5",
+    "typescript": "1.6.2",
     "vinyl-source-stream": "~1.1.0",
-    "webpack": "^1.12.2"
+    "webpack": "1.12.2"
   },
   "license": "BSD-3-Clause",
   "repository": {
@@ -29,7 +29,7 @@
     "url": "https://github.com/quilljs/parchment"
   },
   "scripts": {
-    "prepublish": "gulp build",
+    "dist": "tsc ./src/parchment.ts --module commonjs --target ES5 --outDir dist",
     "test": "gulp test"
   },
   "bugs": {
